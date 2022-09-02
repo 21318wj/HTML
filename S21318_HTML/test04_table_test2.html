@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Tset04_table_test2</title>
+    <style type="text/css">
+     .header{
+         background-color:blue;
+         color:yellow;
+         text-align:center;
+         line-height:50px;
+      }
+      caption{
+         text-align : right;
+       }
+      table {
+          border : 1px solid black;
+          margin-left : auto; 
+          margin-right : auto;
+     }
+      table tr td, table tr th{
+          border : 1px solid black;
+          //border : 3px dotted black;
+          padding : 5px;
+          text-align : center;
+    </style>
+</head>
+<body>
+    <header class="header">성일정보고 2학년 13반 18번 장우진&emsp;입니다
+</header>
+
+<table>
+          	      <caption>2학년13반 시간표</caption>
+	<tr>
+	      <th>1행 1열</th>	 
+                  <th>1행 2열</th>
+                  <td>1행 3열</td>
+                  <td><input type = "text" size = "12"></td>
+	</tr>	
+	<tr>
+	      <td>2행 1열</td>	 
+                  <td>2행 2열</td>
+                  <td>2행 3열</td>     
+	       <td><input type = "text" size = "12"></td>
+	</tr>
+	<tr>
+	      <td>3행 1열</td>	 
+                  <td>3행 2열</td>
+                  <td>3행 3열</td> 
+	      <td><input type="date" name="i_date"></td>	
+	</tr>
+    </table>
+</body>
+</html>

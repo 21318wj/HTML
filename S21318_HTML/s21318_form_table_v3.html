@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>s21318_from_table_v3</title>
+   <link rel="stylesheet" type="text/css" href="./css/s21318_from_table.css">
+   <script type = "text/javascript">
+	 function checkValue() {
+ 		var cv = document.data;
+
+		if(cv.name.value == "") {
+			alert("성명을 입력하세요.");
+			cv.name.focus();
+			return false;
+		}
+		else if(cv.phone.value == "") {
+			alert("전화번호를 입력하세요.");
+			cv.phone.focus();
+			return false;
+		}
+		else if(cv.dream.value == "") {
+			alert("장래희망을 입력하세요.");
+			cv.dream.focus();
+			return false;
+		}
+		else if(cv.pw.value == "") {
+			alert("비밀번호를 입력하세요.");
+			cv.pw.focus();
+			return false;
+		}
+		else if(cv.std_date.value == "") {
+			alert("이력기준일자를 입력하세요.");
+			cv.std_date.focus();
+			return false;
+		}
+		else if(!cv.email_id.value) {
+			alert("이메일 입력하세요.");
+			cv.email_id.focus();
+			return false;
+		}
+		else if(!cv.man_div.value) {
+			alert("남여구분을 입력하세요.");
+			cv.man_div.focus();
+			return false;
+		}
+	}
+   </script>
+</head>
+<body>
+     <h2 class="header">성일정보고 2학년 13반 18번 장우진입니다</h2>
+      <form name = "data" action = "http://localhost/login.php" method = "post" onsubmit = "return checkValue()">
+      <table>
+	<caption><strong>나의 이력사항입니다.<strong></caption>
+         <tr>
+            <th><span>*</span>성명</th>
+            <td>
+               <div class="name">
+                 <input type = "text" size = "20" name = "name">
+                  </div>
+                  </td> 
+             <th><span>*</span>전화번호</th>
+              <td>
+                <div class="phone">
+                   <input type = "text" size = "20" name = "phone">
+                      </div>
+                </td>
+         </tr>
+  <tr>
+              <th>학교</th>
+               <td>
+                  <div class="school">
+                  <input type = "text" size = "20" name = "school">
+                  </div>
+                  </td>
+               <th>학번</th>
+              <td>
+                <div class="hak">
+                <input type = "text" size = "20" name = "hak">
+             </div>
+             </td>
+           </tr>
+    
+          <tr>
+              <th><span>*</span>장래희망</th>
+               <td>
+                  <div class="dream">
+                  <input type = "text" size = "20" name = "dream">
+                  </div>
+                  </td>
+               <th>특기</th>
+              <td>
+                <div class="def">
+                <input type = "text" size = "20" name = "def">
+             </div>
+             </td>
+           </tr>
+
+        <tr>
+              <th><span>*</span>비밀번호</th>
+               <td>
+                  <div class="pw">
+                  <input type = "password" size = "20" name = "pw">
+                  </div>
+                  </td>
+               <th><span>*</span>이력기준일자</th>
+              <td>
+                <div class="std_date">
+                <input type = "date" size = "20" name = "std_date">
+             </div>
+             </td>
+           </tr>
+
+       <tr>
+              <th><span>*</span>이메일</th>
+               <td>
+                  <div class="emai_id">
+                  <input type = "text" size = "15" name = "email_id"> @ 
+                 <select name = "email_domain">
+               <option value="1">네이버</option>
+               <option value="2">구글</option>
+               <option value="3">다음</option>
+                </select>
+                  </div>
+                  </td>
+               <th><span>*</span>남여구분</th>
+              <td>
+                <div class="man_div">
+               <input type = "radio" name = "man_div" value = "Men" checked> 남
+                      &emsp;
+                  <input type="radio" name="man_div" value="Women"> 여
+             </div>
+             </td>
+           </tr>
+
+          <tr>
+             <td colspan="4" align="center">
+                    <span>*</span>부분은 필수 입력사항 입니다. &emsp;
+                    <input type = "submit" value = "등록하기"> &emsp;
+                    <input type = "reset" value = "취소하기">
+               </span>
+             </div>
+          </td>
+       </tr>
+</table>
+</form>
+</body>
+</html>        
